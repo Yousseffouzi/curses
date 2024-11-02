@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yofouzi <yofouzi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 21:08:45 by yofouzi           #+#    #+#             */
-/*   Updated: 2024/10/28 21:09:45 by yofouzi          ###   ########.fr       */
+/*   Created: 2024/11/02 11:37:24 by yofouzi           #+#    #+#             */
+/*   Updated: 2024/11/02 11:58:55 by yofouzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strchr(const char *s, int c)
+char    *ft_strnstr(const char *haystack, const char *needel, size_t n)
 {
-    unsigned int i;
-    char cc;
+	size_t  i;
+	size_t  j;
+	size_t  n_needel;
 
     i = 0;
-    cc = (char) c;
-    while (s[i])
+    if (*needel == '\0')
+        return ((char *)haystack);
+    while (haystack[i] && i < n )
     {
-        if (s[i] == cc)
-            return ((char *)&s[i]);
+        j = 0;
+        while(needel[j] && (i + j) <  n && haystack[i + j] == needel[j])
+            j++;
+        if(!needel[j])
+            return ((char *)&haystack[i]);
         i++;
     }
-    if (cc == '\0')
-        return ((char *)&s[i]);
     return (NULL);
 }
