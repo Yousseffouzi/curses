@@ -1,2 +1,2 @@
 # curses
-my fuking work is here in 1337 
+the work is here in 1337
