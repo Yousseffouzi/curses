@@ -16,7 +16,6 @@ char    *ft_strnstr(const char *haystack, const char *needel, size_t n)
 {
 	size_t  i;
 	size_t  j;
-	size_t  n_needel;
 
     i = 0;
     if (*needel == '\0')
