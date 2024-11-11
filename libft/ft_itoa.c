@@ -26,6 +26,7 @@ static int	len(long c)
 	}
 	return (i);
 }
+
 char	*ft_itoa(int c)
 {
 	int		i;
@@ -39,10 +40,7 @@ char	*ft_itoa(int c)
 		return (NULL);
 	str[i] = '\0';
 	if (nbr == 0)
-	{
 		str[0] = '0';
-		return (str);
-	}
 	if (nbr < 0)
 	{
 		str[0] = '-';

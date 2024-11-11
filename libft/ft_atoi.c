@@ -36,3 +36,12 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
+
+/*int main()
+{
+        const char      *str;
+
+        str = "-9385629";
+        printf("apply ft_atoi on this string : '%s' => %d", str,ft_atoi(str));
+        return (0);
+}*/

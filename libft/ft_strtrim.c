@@ -25,6 +25,7 @@ static int	ft_check(char c, const char *set)
 	}
 	return (0);
 }
+
 char	*ft_strtrim(const char *s, const char *set)
 {
 	size_t	start;
@@ -36,10 +37,8 @@ char	*ft_strtrim(const char *s, const char *set)
 		return (NULL);
 	start = 0;
 	end = ft_strlen(s);
-	// find start
 	while (s[start] && ft_check(s[start], set))
 		start++;
-	// find end
 	while (end > start && ft_check(s[end - 1], set))
 		end--;
 	trim = ((char *)malloc((end - start + 1) * (sizeof(char))));

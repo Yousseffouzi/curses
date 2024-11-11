@@ -34,6 +34,7 @@ static size_t	ft_count_words(const char *s, char c)
 	}
 	return (count);
 }
+
 static char	**free_result(char **str, int i)
 {
 	while (i > 0)
@@ -44,11 +45,11 @@ static char	**free_result(char **str, int i)
 	free(str);
 	return (0);
 }
+
 char	**ft_split(const char *s, char c)
 {
 	size_t	i;
 	size_t	j;
-	size_t	count_words;
 	size_t	start;
 	char	**result;
 
@@ -56,8 +57,7 @@ char	**ft_split(const char *s, char c)
 		return (NULL);
 	i = 0;
 	j = 0;
-	count_words = ft_count_words(s, c);
-	result = (char **)malloc((count_words + 1) * sizeof(char));
+	result = (char **)malloc((ft_count_words(s, c) + 1) * sizeof(char));
 	if (!result)
 		return (NULL);
 	while (s[i])

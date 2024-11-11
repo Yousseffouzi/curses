@@ -25,3 +25,16 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
+
+/*int main()
+{
+	unsigned char	str[20];
+	size_t	n;
+
+	str[] = "Youssef FOUZI";
+	n = 7;
+	printf("befour apply ft_bzero on : '%s'", str);
+	ft_bzero(str,n);
+	printf("after apply ft_bzero on : '%s'", str);
+	return (0);
+}*/

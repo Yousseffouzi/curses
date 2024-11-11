@@ -22,3 +22,19 @@ void	*ft_calloc(size_t num, size_t size)
 	ft_bzero(ptr, num * size);
 	return (ptr);
 }
+
+/*int main()
+{
+	char	*str;
+
+	str = (char *)ft_calloc(4,sizeof(char));
+	if (!str)
+		return (1);
+	str[0] = 'a';
+	str[1] = 'b';
+	str[2] = 'c';
+	str[3] = 'd';
+	str[4] = '\0';
+	return (str);
+	free(str);
+}*/
