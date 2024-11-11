@@ -36,10 +36,10 @@ char	*ft_strtrim(const char *s, const char *set)
 		return (NULL);
 	start = 0;
 	end = ft_strlen(s);
-	//find start
-	while (s[start] && ft_check(s[start],set))
+	// find start
+	while (s[start] && ft_check(s[start], set))
 		start++;
-	//find end
+	// find end
 	while (end > start && ft_check(s[end - 1], set))
 		end--;
 	trim = ((char *)malloc((end - start + 1) * (sizeof(char))));
@@ -52,6 +52,6 @@ char	*ft_strtrim(const char *s, const char *set)
 		i++;
 		start++;
 	}
-	trim[i]	= '\0';
+	trim[i] = '\0';
 	return (trim);
 }
