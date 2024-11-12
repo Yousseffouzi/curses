@@ -17,16 +17,12 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	size_t	i;
 	size_t	j;
 	char	*join;
-	size_t	s1len;
-	size_t	s2len;
 
 	i = 0;
 	j = 0;
 	if (!s1 || !s2)
 		return (NULL);
-	s1len = ft_strlen(s1);
-	s2len = ft_strlen(s2);
-	join = (char *)malloc((s1len + s2len + 1) * (sizeof(char)));
+	join = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * (sizeof(char)));
 	if (!join)
 		return (NULL);
 	while (s1[i])
@@ -35,11 +31,10 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		i++;
 		j++;
 	}
-	i = 0;
-	while (s2[i])
+	while (*s2)
 	{
-		join[j] = s2[i];
-		i++;
+		join[j] = *s2;
+		s2++;
 		j++;
 	}
 	join[j] = '\0';
