@@ -21,6 +21,7 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
+<<<<<<< HEAD
 
 /*int main()
 {
@@ -28,4 +29,12 @@ int	ft_isalnum(int c)
 
 	c = '-';
 	printf("isalnum :'%c' -> %d ",c ,ft_isalnum(c));
+=======
+/*int main()
+{
+    int c;
+
+    c = 'h';
+    printf("isalnum :'%c' -> %d ",c ,ft_isalnum(c));
+>>>>>>> e5c6093bd691d0e04a461f69254d4a7f7510557c
 }*/
