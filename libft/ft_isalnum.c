@@ -21,3 +21,10 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
+/*int main()
+{
+    int c;
+
+    c = 'h';
+    printf("isalnum :'%c' -> %d ",c ,ft_isalnum(c));
+}*/
