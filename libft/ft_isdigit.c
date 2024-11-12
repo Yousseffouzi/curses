@@ -6,7 +6,7 @@
 /*   By: yofouzi <yofouzi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 14:33:26 by yofouzi           #+#    #+#             */
-/*   Updated: 2024/10/22 14:41:25 by yofouzi          ###   ########.fr       */
+/*   Updated: 2024/11/12 16:39:07 by yofouzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,11 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
+
+/*int main()
+{
+	int	c;
+
+	c = '4';
+	printf("isdigit :'%c' -> %d ",c ,ft_isdigit(c));
+}*/

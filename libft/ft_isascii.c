@@ -6,7 +6,7 @@
 /*   By: yofouzi <yofouzi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 15:32:50 by yofouzi           #+#    #+#             */
-/*   Updated: 2024/10/22 15:39:55 by yofouzi          ###   ########.fr       */
+/*   Updated: 2024/11/12 16:38:11 by yofouzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,10 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
+/*int main()
+{
+	int	c;
+
+	c = '8';
+	printf("isascii :'%c' -> %d ",c ,ft_isascii(c));
+}*/

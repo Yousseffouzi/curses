@@ -6,7 +6,7 @@
 /*   By: yofouzi <yofouzi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:16:51 by yofouzi           #+#    #+#             */
-/*   Updated: 2024/10/30 18:17:30 by yofouzi          ###   ########.fr       */
+/*   Updated: 2024/11/12 18:19:05 by yofouzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,18 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
+/*int main()
+{
+	const char	*s1;
+	const char	*s2;
+	int	r;
+	size_t	s;
+
+	s1 = "Youssef Fouzi";
+	s2 = "Youssef_Fouzi";
+	s = 5;
+	r = ft_memcmp(s1, s2, s);
+	printf("commper between :1-'%s', 2-'%s' by lenght '%zu' -> %d",s1, s2, s, r);
+	return (0);
+}*/

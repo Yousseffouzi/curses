@@ -6,7 +6,7 @@
 /*   By: yofouzi <yofouzi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:27:14 by yofouzi           #+#    #+#             */
-/*   Updated: 2024/10/22 14:31:04 by yofouzi          ###   ########.fr       */
+/*   Updated: 2024/11/12 16:37:18 by yofouzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,11 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
+
+/*int main()
+{
+	int	c;
+
+	c = 'i';
+	printf("isalpha :'%c' -> %d ",c ,ft_isalpha(c));
+}*/

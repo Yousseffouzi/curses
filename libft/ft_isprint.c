@@ -6,7 +6,7 @@
 /*   By: yofouzi <yofouzi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 15:40:22 by yofouzi           #+#    #+#             */
-/*   Updated: 2024/10/22 15:53:13 by yofouzi          ###   ########.fr       */
+/*   Updated: 2024/11/12 16:39:59 by yofouzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,11 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
+
+/*int main()
+{
+	int	c;
+
+	c = ' ';
+	printf("isprint :'%c' -> %d ",c ,ft_isprint(c));
+}*/
