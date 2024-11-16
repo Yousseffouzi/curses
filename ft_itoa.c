@@ -6,7 +6,7 @@
 /*   By: yofouzi <yofouzi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 17:47:33 by yofouzi           #+#    #+#             */
-/*   Updated: 2024/11/12 16:46:49 by yofouzi          ###   ########.fr       */
+/*   Updated: 2024/11/09 17:47:59 by yofouzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,3 @@ char	*ft_itoa(int c)
 	}
 	return (str);
 }
-
-/*int main()
-{
-	int	c;
-
-	c = 8758;
-	printf("apply itoa : %d -> '%s'",c , ft_itoa(c));
-}*/

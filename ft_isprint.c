@@ -1,40 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yofouzi <yofouzi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 18:17:31 by yofouzi           #+#    #+#             */
-/*   Updated: 2024/11/02 18:19:21 by yofouzi          ###   ########.fr       */
+/*   Created: 2024/10/22 15:40:22 by yofouzi           #+#    #+#             */
+/*   Updated: 2024/10/22 15:53:13 by yofouzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t num, size_t size)
+int	ft_isprint(int c)
 {
-	void	*ptr;
-
-	ptr = malloc(num * size);
-	if (ptr == NULL)
-		return (NULL);
-	ft_bzero(ptr, num * size);
-	return (ptr);
-}
-
-/*int main()
-{
-	char	*str;
-
-	str = (char *)ft_calloc(4,sizeof(char));
-	if (!str)
+	if (c >= 32 && c <= 126)
 		return (1);
-	str[0] = 'a';
-	str[1] = 'b';
-	str[2] = 'c';
-	str[3] = 'd';
-	str[4] = '\0';
-	return (str);
-	free(str);
-}*/
+	else
+		return (0);
+}

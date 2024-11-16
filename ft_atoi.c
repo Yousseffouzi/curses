@@ -6,7 +6,7 @@
 /*   By: yofouzi <yofouzi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:51:21 by yofouzi           #+#    #+#             */
-/*   Updated: 2024/11/02 16:52:33 by yofouzi          ###   ########.fr       */
+/*   Updated: 2024/11/13 16:44:03 by yofouzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-
-/*int main()
-{
-        const char      *str;
-
-        str = "-9385629";
-        printf("apply ft_atoi on this string : '%s' => %d", str,ft_atoi(str));
-        return (0);
-}*/

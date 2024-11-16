@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yofouzi <yofouzi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 11:37:24 by yofouzi           #+#    #+#             */
-/*   Updated: 2024/11/02 11:58:55 by yofouzi          ###   ########.fr       */
+/*   Created: 2024/11/15 20:24:46 by yofouzi           #+#    #+#             */
+/*   Updated: 2024/11/16 12:01:35 by yofouzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needel, size_t n)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	if (*needel == '\0')
-		return ((char *)haystack);
-	while (haystack[i] && i < n)
+	if (lst && new)
 	{
-		j = 0;
-		while (needel[j] && (i + j) < n && haystack[i + j] == needel[j])
-			j++;
-		if (!needel[j])
-			return ((char *)&haystack[i]);
-		i++;
+		new->next = *lst;
+		*lst = new;
 	}
-	return (NULL);
 }

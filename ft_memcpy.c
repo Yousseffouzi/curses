@@ -6,7 +6,7 @@
 /*   By: yofouzi <yofouzi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 18:38:13 by yofouzi           #+#    #+#             */
-/*   Updated: 2024/11/12 19:23:49 by yofouzi          ###   ########.fr       */
+/*   Updated: 2024/11/14 23:40:40 by yofouzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	if (!dest && !src)
 		return (NULL);
+	if (dest == src)
+		return (dest);
 	dst = (unsigned char *)dest;
 	sc = (const unsigned char *)src;
 	i = 0;
@@ -30,20 +32,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*int main()
-{
-	unsigned char	src[] = "YOUSSEF_fouzi";
-	unsigned char	dest[50];
-	size_t	n;
-	char	*r;
-	char	*r_r;
-	
-	n = 1;
-	r = ft_memcpy(dest, src, n);
-	r_r = memcpy(dest, src, n);
-	dest[n] = '\0';
-	printf("source: '%s', to dest: '%s',Up to n: %zu -> %s\n", src, dest, n, r);
-	printf("source: '%s', to dest: '%s',Up to n: %zu -> %s", src, dest, n, r_r);
-	return (0);
-}*/

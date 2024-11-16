@@ -6,7 +6,7 @@
 /*   By: yofouzi <yofouzi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:34:24 by yofouzi           #+#    #+#             */
-/*   Updated: 2024/11/06 14:49:26 by yofouzi          ###   ########.fr       */
+/*   Updated: 2024/11/13 15:21:42 by yofouzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_strtrim(const char *s, const char *set)
 		start++;
 	while (end > start && ft_check(s[end - 1], set))
 		end--;
-	trim = ((char *)malloc((end - start + 1) * (sizeof(char))));
+	trim = (char *)malloc((end - start + 1) * sizeof(char));
 	if (!trim)
 		return (NULL);
 	i = 0;

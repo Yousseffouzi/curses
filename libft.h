@@ -6,7 +6,7 @@
 /*   By: yofouzi <yofouzi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 15:53:52 by yofouzi           #+#    #+#             */
-/*   Updated: 2024/11/12 19:19:07 by yofouzi          ###   ########.fr       */
+/*   Updated: 2024/11/16 12:39:49 by yofouzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 # include <string.h>
+# include <stdio.h>
+# include <fcntl.h>
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -56,5 +57,23 @@ char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s, const char *set);
 char	**ft_split(const char *s, char c);
 char	*ft_itoa(int c);
+
+typedef struct s_list
+{
+	void				*content;
+	struct s_list		*next;
+}		t_list;
+
+t_list	*ft_lstnew(void *content);
+t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*def)(void *));
+
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*def)(void *));
+void	ft_lstclear(t_list **lst, void (*def)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+
+int		ft_lstsize(t_list *lst);
 
 #endif

@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yofouzi <yofouzi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 14:58:08 by yofouzi           #+#    #+#             */
-/*   Updated: 2024/10/26 15:14:41 by yofouzi          ###   ########.fr       */
+/*   Created: 2024/11/16 10:34:48 by yofouzi           #+#    #+#             */
+/*   Updated: 2024/11/16 12:35:42 by yofouzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
-size_t	ft_strlen(const char *str)
+void	ft_lstclear(t_list **lst, void (*def)(void *))
 {
-	size_t	i;
+	t_list	*current;
+	t_list	*tmp;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	if (!lst || !def)
+		return ;
+	current = *lst;
+	while (current)
+	{
+		tmp = current;
+		current = current->next;
+		def(tmp->content);
+		free(tmp);
+	}
+	*lst = NULL;
 }

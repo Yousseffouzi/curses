@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yofouzi <yofouzi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 15:32:50 by yofouzi           #+#    #+#             */
-/*   Updated: 2024/11/12 16:38:11 by yofouzi          ###   ########.fr       */
+/*   Created: 2024/11/15 20:05:18 by yofouzi           #+#    #+#             */
+/*   Updated: 2024/11/15 21:46:34 by yofouzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+t_list	*ft_lstnew(void *content)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
-}
-/*int main()
-{
-	int	c;
+	t_list	*new_node;
 
-	c = '8';
-	printf("isascii :'%c' -> %d ",c ,ft_isascii(c));
-}*/
+	new_node = malloc(sizeof(t_list));
+	if (!new_node)
+		return (0);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
+}
