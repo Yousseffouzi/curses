@@ -6,13 +6,13 @@
 /*   By: yofouzi <yofouzi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 17:30:13 by yofouzi           #+#    #+#             */
-/*   Updated: 2024/11/20 18:09:07 by yofouzi          ###   ########.fr       */
+/*   Updated: 2024/12/06 15:41:46 by yofouzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putchar(char c)
+int	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	return (write(1, &c, 1));
 }

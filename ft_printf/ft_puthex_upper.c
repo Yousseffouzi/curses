@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_puthex_upper.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yofouzi <yofouzi@student.1337.ma>          +#+  +:+       +#+        */
+/*   By: yofouzi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/20 17:43:17 by yofouzi           #+#    #+#             */
-/*   Updated: 2024/12/06 15:45:06 by yofouzi          ###   ########.fr       */
+/*   Created: 2024/12/08 16:01:44 by yofouzi           #+#    #+#             */
+/*   Updated: 2024/12/08 16:02:01 by yofouzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr(char *str)
+int	ft_puthex_upper(unsigned int c)
 {
-	int	count;
+	int		count;
+	char	*hex;
 
 	count = 0;
-	if (str)
-	{
-		while (*str)
-		{
-			count += ft_putchar(*str);
-			str++;
-		}
-	}
-	else
-		count += ft_putstr("(null)");
+	hex = "0123456789ABCDEF";
+	if (c > 15)
+		count += ft_puthex_upper(c / 16);
+	count += ft_putchar(hex[c % 16]);
 	return (count);
 }
